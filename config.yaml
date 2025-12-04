@@ -1,0 +1,17 @@
+start_url: "http://books.toscrape.com/catalogue/page-1.html"
+user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+delay_seconds: 1.5
+max_retries: 3
+output_csv: "books_output.csv"
+use_selenium: false
+
+pagination:
+  selector: "li.next > a"
+
+item:
+  container_selector: "article.product_pod"
+  fields:
+    title: { selector: "h3 > a", attr: "title" }
+    price: { selector: "p.price_color", attr: "text" }
+    rating: { selector: "p.star-rating", attr: "class" }
+    url:   { selector: "h3 > a", attr: "href" }

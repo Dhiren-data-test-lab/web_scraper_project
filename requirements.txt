@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+lxml
+pandas
+urllib3
+selenium
+tqdm
+python-dateutil
+pyyaml
